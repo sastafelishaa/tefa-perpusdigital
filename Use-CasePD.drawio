@@ -1,32 +1,35 @@
-<mxfile host="app.diagrams.net" modified="2024-02-02T03:00:00.576Z" agent="Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="7CrCdKkCEEZnRfjdadtG" version="23.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-02T03:08:36.425Z" agent="Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="9E8eRvnlanbKpGlgc6dE" version="23.0.2" type="github">
   <diagram name="Page-1" id="Sj5s_malbvVtMXl_L0Oq">
     <mxGraphModel dx="1375" dy="1894" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="adlr6IZpHOiuLpmfqXsr-11" value="Pengunjung" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="160" y="-320" width="40" height="80" as="geometry" />
+          <mxGeometry x="160" y="-345" width="40" height="80" as="geometry" />
         </mxCell>
         <mxCell id="adlr6IZpHOiuLpmfqXsr-15" value="Pustakawan" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="640" y="-320" width="40" height="80" as="geometry" />
+          <mxGeometry x="620" y="-345" width="40" height="80" as="geometry" />
         </mxCell>
         <mxCell id="adlr6IZpHOiuLpmfqXsr-16" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
-          <mxGeometry x="290" y="-490" width="270" height="420" as="geometry" />
+          <mxGeometry x="250" y="-560" width="310" height="510" as="geometry" />
         </mxCell>
         <mxCell id="adlr6IZpHOiuLpmfqXsr-17" value="Perpustakaan Digital" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="adlr6IZpHOiuLpmfqXsr-16">
-          <mxGeometry x="65" y="10" width="140" height="30" as="geometry" />
+          <mxGeometry x="85" y="10" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="adlr6IZpHOiuLpmfqXsr-18" value="Form Pengunjung" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="adlr6IZpHOiuLpmfqXsr-16">
-          <mxGeometry x="45" y="50" width="180" height="70" as="geometry" />
+          <mxGeometry x="65" y="60" width="180" height="70" as="geometry" />
         </mxCell>
         <mxCell id="adlr6IZpHOiuLpmfqXsr-19" value="Mencari Buku" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="adlr6IZpHOiuLpmfqXsr-16">
-          <mxGeometry x="45" y="140" width="180" height="70" as="geometry" />
+          <mxGeometry x="65" y="150" width="180" height="70" as="geometry" />
         </mxCell>
         <mxCell id="adlr6IZpHOiuLpmfqXsr-20" value="Melihat Detail Buku" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="adlr6IZpHOiuLpmfqXsr-16">
-          <mxGeometry x="45" y="230" width="180" height="70" as="geometry" />
+          <mxGeometry x="65" y="240" width="180" height="70" as="geometry" />
         </mxCell>
         <mxCell id="adlr6IZpHOiuLpmfqXsr-21" value="Melihat Laporan Statistik" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="adlr6IZpHOiuLpmfqXsr-16">
-          <mxGeometry x="45" y="320" width="180" height="70" as="geometry" />
+          <mxGeometry x="65" y="330" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="adlr6IZpHOiuLpmfqXsr-24" value="Melihat Laporan Statistik" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="adlr6IZpHOiuLpmfqXsr-16">
+          <mxGeometry x="65" y="420" width="180" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
