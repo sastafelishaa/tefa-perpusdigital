@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-12">
         <h2 class="text-center my-4">FORM KUNJUNGAN</h2>
-        <form>
+        <form @submit.prevent="kirimData">
           <div class="mb-3">
             <input type="text" class="form-control form control-lg rounded-5" placeholder="Nama..">
           </div>
@@ -71,6 +71,43 @@
     </div>
   </div>
 </template>
+
+<script setup>
+const supabase = useSupabaseClient()
+
+const member = ref([])
+const objektif = ref([])
+
+const form = ref({
+  nama: " ",
+  keanggotaan: " ",
+  tingkat: " ",
+  jurusan: " ",
+  kelas: " ",
+  keperluan: " ",
+})
+
+const kirimData = async () => {
+  const {error} = await supabase.from('pengunjung').insert([form.value])
+  if(!error) navigateTo('/pengunjung')
+}
+
+const getKeanggotaan = async () => {
+  const {data, error} = await supabase.from('keanggotaan').select('*')
+  if(data) member.value = data
+}
+
+const getKeperluan = async () => {
+  const {data, error} = await supabase.from('keperluan').select('*')
+  if(data) objektif.value = data
+}
+
+onMounted(() => {
+  getKeanggotaan()
+  getKeperluan()
+})
+
+</script>
 
 <style scoped>
 .bg-primary {
