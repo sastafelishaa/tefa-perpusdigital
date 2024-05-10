@@ -21,53 +21,79 @@
         </nuxt-link>
       </div>
 
-      <h2 class="Statistik mt-5">
-        STATISTIK
-      </h2>
+      <h2 class="Statistik mt-5">STATISTIK</h2>
 
       <div class="col-lg-6">
-        <div class="card kunjungan rounded-4 mt-5">
-          <div class="card-body d-flex align-items-center">
-            <h1>5</h1>
-            <h2 class="pt-5">Pengunjung</h2>
+        <nuxt-link to="/pengunjung">
+          <div class="card kunjungan rounded-4 mt-5">
+            <div class="card-body d-flex align-items-center">
+              <h1>{{ pengunjung }}</h1>
+              <h2 class="pt-5">Pengunjung</h2>
+            </div>
           </div>
-        </div>
+        </nuxt-link>
       </div>
 
       <div class="col-lg-6">
+        <!-- <nuxt-link to="/buku"> -->
         <div class="card buku rounded-4 mt-5">
           <div class="card-body d-flex align-items-center">
-            <h1>200</h1>
+            <h1>{{ buku }}</h1>
             <h2 class="pt-5">Buku</h2>
           </div>
         </div>
+        <!-- </nuxt-link> -->
       </div>
     </div>
-    <Chart />
+    <div class="container">
+      <Chart />
+    </div>
   </div>
 </template>
+
+<script setup>
+const supabase = useSupabaseClient();
+
+const pengunjung = ref(0);
+
+const buku = ref(0);
+
+const totalPengunjung = async () => {
+  const { data, error, count } = await supabase.from("pengunjung").select("*", { count: "exact" });
+  if (count) pengunjung.value = count;
+};
+
+const totalBuku = async () => {
+  const { data, error, count } = await supabase.from("buku").select("*", { count: "exact" });
+  if (count) buku.value = count;
+};
+
+onMounted(() => {
+  totalPengunjung();
+  totalBuku();
+});
+</script>
 
 <style scoped>
 .card {
   height: 250px;
-  box-shadow: 1px 1px 10px #516C84;
+  box-shadow: 1px 1px 10px #516c84;
 }
 .card.bg-pengunjung {
-  background: url('../assets/img/bg-kunjungan.jpeg') no-repeat center center;
+  background: url("../assets/img/bg-kunjungan.jpeg") no-repeat center center;
   background-size: cover;
   opacity: 50%;
-  
 }
 .card.bg-buku {
-  background: url('../assets/img/bg-buku.jpg') no-repeat center center;
+  background: url("../assets/img/bg-buku.jpg") no-repeat center center;
   background-size: cover;
   opacity: 50%;
 }
 .card.kunjungan {
-  background-color: #E4C72D;
+  background-color: #e4c72d;
 }
 .card.buku {
-  background-color: #86E996;
+  background-color: #86e996;
 }
 h1 {
   font-size: 7rem;
