@@ -24,14 +24,14 @@
       <h2 class="Statistik mt-5">STATISTIK</h2>
 
       <div class="col-lg-6">
-        <!-- <nuxt-link to="../pengunjung"> -->
+        <nuxt-link to="../pengunjung">
           <div class="card kunjungan rounded-4 mt-5">
             <div class="card-body d-flex align-items-center">
               <h1>{{ pengunjung }}</h1>
               <h2 class="pt-5">Pengunjung</h2>
             </div>
           </div>
-        <!-- </nuxt-link> -->
+        </nuxt-link>
       </div>
 
       <div class="col-lg-6">
