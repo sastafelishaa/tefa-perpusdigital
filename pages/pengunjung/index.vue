@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-12">
         <h2 class="text-center my-4">DAFTAR RIWAYAT KUNJUNGAN</h2>
-        <nuxt-link to="/" class="btn bg-warning btn-lg rounded-5 px-5 text-white mt-3">Kembali</nuxt-link>
+        <nuxt-link to="../pengunjung/tambah" class="btn bg-warning btn-lg rounded-5 px-5 text-white mt-3">Kembali</nuxt-link>
         <div class="my-3">
           <form @submit.prevent="getPengunjung">
             <input v-model= "keyword" type="search" class="form-control form-control-lg rounded-5" placeholder="Filter..." />
