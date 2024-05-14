@@ -18,6 +18,9 @@
               <td>No</td>
               <td>Nama</td>
               <td>Keanggotaan</td>
+              <td>Tingkat</td>
+              <td>Jurusan</td>
+              <td>Kelas</td>
               <td>Tanggal</td>
               <td>Keperluan</td>
             </tr>
@@ -27,6 +30,9 @@
               <td>{{ i + 1 }}</td>
               <td>{{ visitor.nama }}</td>
               <td>{{ visitor.keanggotaan.nama }}</td>
+              <td>{{ visitor.tingkat }}</td>
+              <td>{{ visitor.jurusan }}</td>
+              <td>{{ visitor.kelas }}</td>
               <td>{{ visitor.tanggal }}</td>
               <td>{{ visitor.keperluan.keterangan }}</td>
             </tr>

@@ -10,6 +10,7 @@
             <span v-else>
               <img :src="buku.cover" alt="cover" class="cover" />
             </span>
+            <!-- <img :src="buku.cover" alt="cover" class="cover">  -->
           </div>
         </div>
       </div>
@@ -32,16 +33,10 @@
               <span v-if="buku.kategori">
                 Kategori : {{ buku.kategori.nama }}
               </span>
-              <span v-else>
-
-              </span>
             </li>
             <li class="list-group-item">
               <span v-if="buku.rak">
                 No Rak : {{ buku.rak.kode }}
-              </span>
-              <span v-else>
-
               </span>
             </li>
             <li class="list-group-item">Penulis : {{ buku.penulis }}</li>

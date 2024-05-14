@@ -3,7 +3,7 @@
     <div class="row my-5">
       <div class="col-lg-6">
         <nuxt-link to="/pengunjung/tambah">
-          <div class="card bg-pengunjung rounded-4 mt-5">
+          <div class="card bg-kunjungan rounded-4 mt-5">
             <div class="card-body">
               <h2>Pengunjung</h2>
             </div>
@@ -24,7 +24,7 @@
       <h2 class="Statistik mt-5">STATISTIK</h2>
 
       <div class="col-lg-6">
-        <nuxt-link to="../pengunjung">
+        <nuxt-link to="/pengunjung">
           <div class="card kunjungan rounded-4 mt-5">
             <div class="card-body d-flex align-items-center">
               <h1>{{ pengunjung }}</h1>
@@ -79,13 +79,13 @@ onMounted(() => {
   height: 250px;
   box-shadow: 1px 1px 10px #516c84;
 }
-.card.bg-pengunjung {
-  background: url("../assets/img/bg-kunjungan.jpeg") no-repeat center center;
+.card.bg-kunjungan {
+  background: url("../assets/img/bg-kunjungan.webp") no-repeat center center;
   background-size: cover;
   opacity: 50%;
 }
 .card.bg-buku {
-  background: url("../assets/img/bg-buku.jpg") no-repeat center center;
+  background: url("../assets/img/bg-buku.webp") no-repeat center center;
   background-size: cover;
   opacity: 50%;
 }

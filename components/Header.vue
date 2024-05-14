@@ -1,7 +1,7 @@
 <template>
   <div class="row p-3 bg-primary text-white">
     <div class="col-lg-1">
-      <img src="~/assets/img/logo.png" alt="logo smkn 4">
+      <img src="~/assets/img/logo.webp" alt="logo smkn 4">
     </div>
 
     <div class="col-lg-11 ps-5 pt-3">
@@ -17,6 +17,10 @@
 </template>
 
 <style scoped>
+img {
+  width: 127px;
+  height: 148px;
+}
 .bg-primary {
   background-color: #516C84 !important;
 }
