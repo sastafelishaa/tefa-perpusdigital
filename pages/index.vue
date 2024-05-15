@@ -52,6 +52,17 @@
 </template>
 
 <script setup>
+
+useHead({
+  title:"Digitial Library Application",
+  meta: [
+    {
+      name:"description",
+      content:"Home Page"
+    }
+  ]
+})
+
 const supabase = useSupabaseClient();
 
 const pengunjung = ref(0);
