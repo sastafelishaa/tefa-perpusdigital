@@ -28,6 +28,17 @@
 </template>
 
 <script setup>
+
+useHead({
+  title:"Digitial Library Application",
+  meta: [
+    {
+      name:"description",
+      content:"Ini adalah halaman cari buku dimana kamu bisa melihat buku yang terdapat di Perpustakaan",
+    }
+  ]
+})
+
 const supabase = useSupabaseClient()
 
 const buku = ref([])
