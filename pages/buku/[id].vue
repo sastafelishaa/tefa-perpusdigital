@@ -53,6 +53,16 @@
 </template>
 
 <script setup>
+useHead({
+  title:"Digitial Library Application",
+  meta: [
+    {
+      name:"description",
+      content:"Ini adalah halaman dimana kamu bisa melihat detail buku",
+    }
+  ]
+})
+
 const supabase = useSupabaseClient();
 
 const route = useRoute();
