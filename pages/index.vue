@@ -1,54 +1,62 @@
 <template>
-  <div class="container-fluid">
-    <div class="row my-5">
-      <div class="col-lg-6">
-        <nuxt-link to="/pengunjung/tambah">
-          <div class="card bg-kunjungan rounded-4 mt-5">
-            <div class="card-body">
-              <h2>Pengunjung</h2>
-            </div>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <div class="row my-5">
+          <div class="col-lg-6">
+            <nuxt-link to="/pengunjung/tambah">
+              <div class="card bg-kunjungan rounded-4 mt-5">
+                <div class="card-body">
+                  <h2>Pengunjung</h2>
+                </div>
+              </div>
+            </nuxt-link>
           </div>
-        </nuxt-link>
-      </div>
-
-      <div class="col-lg-6">
-        <nuxt-link to="/buku">
-          <div class="card bg-buku rounded-4 mt-5">
-            <div class="card-body">
-              <h2>Cari Buku</h2>
-            </div>
+    
+          <div class="col-lg-6">
+            <nuxt-link to="/buku">
+              <div class="card bg-buku rounded-4 mt-5">
+                <div class="card-body">
+                  <h2>Cari Buku</h2>
+                </div>
+              </div>
+            </nuxt-link>
           </div>
-        </nuxt-link>
-      </div>
-
-      <h2 class="Statistik mt-5">STATISTIK</h2>
-
-      <div class="col-lg-6">
-        <nuxt-link to="/pengunjung">
-          <div class="card kunjungan rounded-4 mt-5">
-            <div class="card-body d-flex align-items-center">
-              <h1>{{ pengunjung }}</h1>
-              <h2 class="pt-5">Pengunjung</h2>
-            </div>
+    
+          <h2 class="Statistik mt-5">STATISTIK</h2>
+    
+          <div class="col-lg-6">
+            <nuxt-link to="/pengunjung">
+              <div class="card kunjungan rounded-4 mt-5">
+                <div class="card-body d-flex align-items-center">
+                  <h1>{{ pengunjung }}</h1>
+                  <h2 class="pt-5">Pengunjung</h2>
+                </div>
+              </div>
+            </nuxt-link>
           </div>
-        </nuxt-link>
-      </div>
-
-      <div class="col-lg-6">
-        <!-- <nuxt-link to="/buku"> -->
-        <div class="card buku rounded-4 mt-5">
-          <div class="card-body d-flex align-items-center">
-            <h1>{{ buku }}</h1>
-            <h2 class="pt-5">Buku</h2>
+    
+          <div class="col-lg-6">
+            <!-- <nuxt-link to="/buku"> -->
+            <div class="card buku rounded-4 mt-5">
+              <div class="card-body d-flex align-items-center">
+                <h1>{{ buku }}</h1>
+                <h2 class="pt-5">Buku</h2>
+              </div>
+            </div>
+            <!-- </nuxt-link> -->
           </div>
         </div>
-        <!-- </nuxt-link> -->
+        <div class="container">
+          <Chart />
+        </div>
       </div>
-    </div>
-    <div class="container">
-      <Chart />
-    </div>
-  </div>
+    </body>
+  </html>
 </template>
 
 <script setup>
