@@ -18,7 +18,7 @@
 
 <style scoped>
 img {
-  width: 127px;
+  width: 131px;
   height: 148px;
 }
 .bg-primary {
