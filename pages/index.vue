@@ -9,7 +9,7 @@
         <div class="row my-5">
           <div class="col-lg-6">
             <nuxt-link to="/pengunjung/tambah">
-              <div class="card bg-kunjungan rounded-4 mt-5">
+              <div class="card bg-kunjungan rounded-4">
                 <div class="card-body">
                   <h2>Pengunjung</h2>
                 </div>
@@ -19,7 +19,7 @@
     
           <div class="col-lg-6">
             <nuxt-link to="/buku">
-              <div class="card bg-buku rounded-4 mt-5">
+              <div class="card bg-buku rounded-4">
                 <div class="card-body">
                   <h2>Cari Buku</h2>
                 </div>
@@ -31,7 +31,7 @@
     
           <div class="col-lg-6">
             <nuxt-link to="/pengunjung">
-              <div class="card kunjungan rounded-4 mt-5">
+              <div class="card kunjungan rounded-4">
                 <div class="card-body d-flex align-items-center">
                   <h1>{{ pengunjung }}</h1>
                   <h2 class="pt-5">Pengunjung</h2>
@@ -42,7 +42,7 @@
     
           <div class="col-lg-6">
             <!-- <nuxt-link to="/buku"> -->
-            <div class="card buku rounded-4 mt-5">
+            <div class="card buku rounded-4">
               <div class="card-body d-flex align-items-center">
                 <h1>{{ buku }}</h1>
                 <h2 class="pt-5">Buku</h2>
@@ -102,17 +102,21 @@ onMounted(() => {
   background: url("../assets/img/bg-kunjungan.webp") no-repeat center center;
   background-size: cover;
   opacity: 50%;
+  margin-top: 5%;
 }
 .card.bg-buku {
   background: url("../assets/img/bg-buku.webp") no-repeat center center;
   background-size: cover;
   opacity: 50%;
+  margin-top: 5%;
 }
 .card.kunjungan {
   background-color: #e4c72d;
+  margin-top: 5%;
 }
 .card.buku {
   background-color: #86e996;
+  margin-top: 5%;
 }
 h1 {
   font-size: 7rem;
