@@ -1,62 +1,54 @@
 <template>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-      <div class="container-fluid">
-        <div class="row my-5">
-          <div class="col-lg-6">
-            <nuxt-link to="/pengunjung/tambah">
-              <div class="card bg-kunjungan rounded-4">
-                <div class="card-body">
-                  <h2>Pengunjung</h2>
-                </div>
-              </div>
-            </nuxt-link>
-          </div>
-    
-          <div class="col-lg-6">
-            <nuxt-link to="/buku">
-              <div class="card bg-buku rounded-4">
-                <div class="card-body">
-                  <h2>Cari Buku</h2>
-                </div>
-              </div>
-            </nuxt-link>
-          </div>
-    
-          <h2 class="Statistik mt-5">STATISTIK</h2>
-    
-          <div class="col-lg-6">
-            <nuxt-link to="/pengunjung">
-              <div class="card kunjungan rounded-4">
-                <div class="card-body d-flex align-items-center">
-                  <h1>{{ pengunjung }}</h1>
-                  <h2 class="pt-5">Pengunjung</h2>
-                </div>
-              </div>
-            </nuxt-link>
-          </div>
-    
-          <div class="col-lg-6">
-            <!-- <nuxt-link to="/buku"> -->
-            <div class="card buku rounded-4">
-              <div class="card-body d-flex align-items-center">
-                <h1>{{ buku }}</h1>
-                <h2 class="pt-5">Buku</h2>
-              </div>
+  <div class="container-fluid">
+    <div class="row my-5">
+      <div class="col-lg-6">
+        <nuxt-link to="/pengunjung/tambah">
+          <div class="card bg-kunjungan rounded-4">
+            <div class="card-body">
+              <h2>Pengunjung</h2>
             </div>
-            <!-- </nuxt-link> -->
+          </div>
+        </nuxt-link>
+      </div>
+
+      <div class="col-lg-6">
+        <nuxt-link to="/buku">
+          <div class="card bg-buku rounded-4">
+            <div class="card-body">
+              <h2>Cari Buku</h2>
+            </div>
+          </div>
+        </nuxt-link>
+      </div>
+
+      <h2 class="Statistik mt-5">STATISTIK</h2>
+
+      <div class="col-lg-6">
+        <nuxt-link to="/pengunjung">
+          <div class="card kunjungan rounded-4">
+            <div class="card-body d-flex align-items-center">
+              <h1>{{ pengunjung }}</h1>
+              <h2 class="pt-5">Pengunjung</h2>
+            </div>
+          </div>
+        </nuxt-link>
+      </div>
+
+      <div class="col-lg-6">
+        <!-- <nuxt-link to="/buku"> -->
+        <div class="card buku rounded-4">
+          <div class="card-body d-flex align-items-center">
+            <h1>{{ buku }}</h1>
+            <h2 class="pt-5">Buku</h2>
           </div>
         </div>
-        <div class="container">
-          <Chart />
-        </div>
+        <!-- </nuxt-link> -->
       </div>
-    </body>
-  </html>
+    </div>
+    <div class="container">
+      <Chart />
+    </div>
+  </div> 
 </template>
 
 <script setup>
@@ -94,24 +86,28 @@ onMounted(() => {
 </script>
 
 <style scoped>
+* {
+  text-decoration: none;
+}
 .card {
   height: 250px;
   box-shadow: 1px 1px 10px #516c84;
 }
 .card.bg-kunjungan {
-  background: url("../assets/img/bg-kunjungan.webp") no-repeat center center;
+  background: url("../assets/img/kunjungan.webp") no-repeat center center;
   background-size: cover;
-  opacity: 50%;
   margin-top: 5%;
+  color: black;
 }
 .card.bg-buku {
-  background: url("../assets/img/bg-buku.webp") no-repeat center center;
+  background: url("../assets/img/caribuku.webp") no-repeat center center;
   background-size: cover;
-  opacity: 50%;
   margin-top: 5%;
+  color: black;
 }
 .card.kunjungan {
   background-color: #e4c72d;
+  color: black;
   margin-top: 5%;
 }
 .card.buku {
@@ -125,4 +121,5 @@ h1 {
   margin-left: 0px;
   font-weight: bold;
 }
+
 </style>
