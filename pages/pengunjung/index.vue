@@ -1,46 +1,54 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2 class="text-center my-4">DAFTAR RIWAYAT KUNJUNGAN</h2>
-        <nuxt-link to="../" class="btn bg-warning btn-lg rounded-5 px-5 text-white mt-3">Kembali</nuxt-link>
-        <div class="my-3">
-          <form @submit.prevent="getPengunjung">
-            <input v-model= "keyword" type="search" class="form-control form-control-lg rounded-5" placeholder="Filter..." />
-          </form>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="text-center my-4">DAFTAR RIWAYAT KUNJUNGAN</h2>
+            <nuxt-link to="../" class="btn bg-warning btn-lg rounded-5 px-5 text-white mt-3">Kembali</nuxt-link>
+            <div class="my-3">
+              <form @submit.prevent="getPengunjung">
+                <input v-model= "keyword" type="search" class="form-control form-control-lg rounded-5" placeholder="Filter..." />
+              </form>
+            </div>
+    
+            <div class="my-3 text-muted">Menampilkan {{ visitors.length }} dari {{ total }}</div>
+    
+            <table class="table">
+              <thead>
+                <tr>
+                  <td>No</td>
+                  <td>Nama</td>
+                  <td>Keanggotaan</td>
+                  <td>Tingkat</td>
+                  <td>Jurusan</td>
+                  <td>Kelas</td>
+                  <td>Tanggal</td>
+                  <td>Keperluan</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(visitor, i) in visitors" :key="i">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ visitor.nama }}</td>
+                  <td>{{ visitor.keanggotaan.nama }}</td>
+                  <td>{{ visitor.tingkat }}</td>
+                  <td>{{ visitor.jurusan }}</td>
+                  <td>{{ visitor.kelas }}</td>
+                  <td>{{ visitor.tanggal }}</td>
+                  <td>{{ visitor.keperluan.keterangan }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-
-        <div class="my-3 text-muted">Menampilkan {{ visitors.length }} dari {{ total }}</div>
-
-        <table class="table">
-          <thead>
-            <tr>
-              <td>No</td>
-              <td>Nama</td>
-              <td>Keanggotaan</td>
-              <td>Tingkat</td>
-              <td>Jurusan</td>
-              <td>Kelas</td>
-              <td>Tanggal</td>
-              <td>Keperluan</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(visitor, i) in visitors" :key="i">
-              <td>{{ i + 1 }}</td>
-              <td>{{ visitor.nama }}</td>
-              <td>{{ visitor.keanggotaan.nama }}</td>
-              <td>{{ visitor.tingkat }}</td>
-              <td>{{ visitor.jurusan }}</td>
-              <td>{{ visitor.kelas }}</td>
-              <td>{{ visitor.tanggal }}</td>
-              <td>{{ visitor.keperluan.keterangan }}</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
-    </div>
-  </div>
+    </body>
+  </html>
 </template>
 
 <script setup>
