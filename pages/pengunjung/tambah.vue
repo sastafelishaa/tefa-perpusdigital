@@ -69,6 +69,17 @@
 </template>
 
 <script setup>
+
+useHead({
+  title:"Digitial Library Application",
+  meta: [
+    {
+      name:"description",
+      content:"Ini adalah halaman yang harus kamu isi pada saat mengunjungi Perpustakaan",
+    }
+  ]
+})
+
 const supabase = useSupabaseClient()
 
 const member = ref([])

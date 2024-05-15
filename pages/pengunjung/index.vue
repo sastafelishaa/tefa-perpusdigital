@@ -44,6 +44,17 @@
 </template>
 
 <script setup>
+
+useHead({
+  title:"Digitial Library Application",
+  meta: [
+    {
+      name:"description",
+      content:"Ini adalah halaman dimana kamu bisa melihat siapa saja orang yang telah mengunjungi Perpustakaan",
+    }
+  ]
+})
+
 const supabase = useSupabaseClient();
 
 const keyword = ref('');
